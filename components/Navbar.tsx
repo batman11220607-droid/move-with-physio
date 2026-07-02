@@ -39,7 +39,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
     }, []);
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-2 h-20 flex items-center justify-between">
 
         {/* Logo */}
@@ -116,7 +116,7 @@ export default function Navbar() {
               <a
                 key={name}
                 href={link}
-                className="px-6 py-4 border-b hover:bg-emerald-50"
+                className="px-6 py-4 border-b text-slate-800 font-medium hover:bg-emerald-50 hover:text-emerald-600 transition"
                 onClick={() => setMenuOpen(false)}
               >
                 {name}
