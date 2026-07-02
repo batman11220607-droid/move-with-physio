@@ -6,12 +6,12 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 const images = [
-  "/images/gallery/gallery1.jpeg",
-  "/images/gallery/gallery2.jpeg",
-  "/images/gallery/gallery3.jpeg",
-  "/images/gallery/gallery4.jpeg",
-  "/images/gallery/gallery5.jpeg",
-  "/images/gallery/gallery6.jpeg",
+  "/images/Gallery/gallery1.jpeg",
+  "/images/Gallery/gallery2.jpeg",
+  "/images/Gallery/gallery3.jpeg",
+  "/images/Gallery/gallery4.jpeg",
+  "/images/Gallery/gallery5.jpeg",
+  "/images/Gallery/gallery6.jpeg",
 ];
 
 export default function Gallery() {
