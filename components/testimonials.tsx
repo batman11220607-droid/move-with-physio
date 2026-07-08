@@ -61,14 +61,14 @@ export default function Testimonials() {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-semibold transition"
-          >
-            ⭐ Leave a Google Review
-          </a>
+        <a
+          href="https://g.page/r/CWdtxb4mKFFlEAI/review"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="review-btn"
+        >
+          ⭐ Leave a Google Review
+        </a>
         </div>
 
       </div>
