@@ -31,7 +31,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://wa.me/919899361297"
+              href="https://wa.me/919899361297?text=Hello%20Move%20With%20Physio,%20I%20would%20like%20to%20book%20an%20appointment."
               className="border border-white px-7 py-4 rounded-xl hover:bg-white hover:text-emerald-700 transition"
             >
               💬 WhatsApp
