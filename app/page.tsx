@@ -11,7 +11,6 @@ import Testimonials from "@/components/testimonials";
 import FloatingButtons from "@/components/FloatingButtons";
 import Treatments from "@/components/Treatments";
 
-
 export default function Home() {
   return (
     <>

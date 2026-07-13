@@ -1,53 +1,156 @@
 "use client";
 
 import FadeIn from "./FadeIn";
-import Script from "next/script";
+import ReviewCard from "./ReviewCardtemp";
+import { reviews } from "./reviews";
+
+import useEmblaCarousel from "embla-carousel-react";
+
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+
+import { useCallback } from "react";
 
 export default function Testimonials() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: true,
+  });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
-    <section id="reviews" className="bg-slate-50 py-24">
+    <section
+      id="reviews"
+      className="py-24 bg-gradient-to-b from-slate-50 to-white"
+    >
       <FadeIn>
         <div className="max-w-7xl mx-auto px-6">
+
+          {/* Heading */}
 
           <p className="text-emerald-600 font-semibold uppercase tracking-[4px] text-center">
             PATIENT REVIEWS
           </p>
 
           <h2 className="text-5xl font-bold text-slate-900 text-center mt-4">
-            What Our Patients Say
+            Trusted by Our Patients
           </h2>
 
-          <p className="text-gray-600 text-center mt-4 mb-12 max-w-2xl mx-auto">
-            Trusted by our patients. Read genuine Google reviews and see why
-            Move With Physio is a preferred choice for physiotherapy care.
+          <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
+            Genuine experiences from patients who trusted
+            <span className="font-semibold text-slate-900">
+              {" "}Move With Physio
+            </span>
+            {" "}for their recovery journey.
           </p>
 
-          {/* Elfsight Script */}
-          <Script
-            src="https://static.elfsight.com/platform/platform.js"
-            strategy="lazyOnload"
-          />
+          {/* Rating Card */}
 
-          {/* Elfsight Widget */}
-          <div
-            className="elfsight-app-1eaba67f-917c-416b-b096-d5a380296c3f"
-            data-elfsight-app-lazy
-          ></div>
+          <div className="mt-12 flex justify-center">
 
-          {/* Google Review Button */}
-          <div className="text-center mt-12">
-            <a
-              href="https://g.page/r/CWdtxb4mKFFlEBM/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold transition duration-300"
-            >
-              ⭐ Leave a Google Review
-            </a>
+            <div className="bg-white rounded-3xl shadow-lg border border-slate-200 px-10 py-7">
+
+              <div className="flex justify-center gap-1 mb-3">
+
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    size={24}
+                    className="fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+
+              </div>
+
+              <h3 className="text-4xl font-bold text-center text-slate-900">
+                5.0
+              </h3>
+
+              <p className="text-center text-slate-500 mt-2">
+                Based on 6 Google Reviews
+              </p>
+
+            </div>
+
           </div>
 
+          {/* Carousel */}
+
+{/* Carousel */}
+<div className="relative mt-16">
+
+  <div className="overflow-hidden" ref={emblaRef}>
+    <div className="flex">
+      {reviews.map((review) => (
+        <div
+          key={review.id}
+          className="min-w-full md:min-w-[50%] lg:min-w-[33.3333%] px-4"
+        >
+          <ReviewCard review={review} />
         </div>
-      </FadeIn>
-    </section>
-  );
+      ))}
+    </div>
+  </div>
+
+  {/* Left Button */}
+  <button
+    onClick={scrollPrev}
+    className="absolute left-4 top-1/2 -translate-y-1/2 z-20
+               w-12 h-12 rounded-full bg-emerald-600 text-white
+               shadow-xl hover:bg-emerald-700
+               hover:scale-110 transition-all
+               flex items-center justify-center"
+  >
+    <ChevronLeft size={28} />
+  </button>
+
+  {/* Right Button */}
+  <button
+    onClick={scrollNext}
+    className="absolute right-4 top-1/2 -translate-y-1/2 z-20
+               w-12 h-12 rounded-full bg-emerald-600 text-white
+               shadow-xl hover:bg-emerald-700
+               hover:scale-110 transition-all
+               flex items-center justify-center"
+  >
+    <ChevronRight size={28} />
+  </button>
+
+</div>
+
+
+        {/* Buttons */}
+
+        <div className="flex flex-col sm:flex-row justify-center gap-5 mt-14">
+
+        <a
+          href="https://www.google.com/maps/place/Move+With+Physio/@28.5400192,77.3709887,17z/data=!4m8!3m7!1s0x390ce7e7392a56e7:0x65512826bec56d67!8m2!3d28.5400192!4d77.3709887!9m1!1b1!16s%2Fg%2F11x5l9g1m6"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105"
+        >
+          ⭐ View All Reviews
+        </a>
+
+        <a
+          href="https://g.page/r/CWdtxb4mKFFlEBM/review"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300"
+        >
+          Leave a Google Review
+        </a>
+
+        </div>
+
+      </div>
+    </FadeIn>
+  </section>
+);
 }
