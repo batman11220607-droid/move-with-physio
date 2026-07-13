@@ -38,9 +38,16 @@ export const reviews = [
     review:
       "I had the best experience with Move With Physio (Dr. Devika). She is polite, excellent at her job, listens carefully, and provides the best possible treatment.",
   },
-
+  {  id: 5,
+    name: "Anchal Sadh",
+    initials: "A",
+    date: "1 hour ago",
+    rating: 5,
+    review:
+      "Dr Devika is very attentive towards her patients. Highly talented and will definitely provide the best treatment",
+  },
   {
-    id: 5,
+    id: 6,
     name: "Gaurav Bhadula",
     initials: "G",
     date: "5 days ago",
