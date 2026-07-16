@@ -3,6 +3,7 @@ export const reviews = [
     id: 1,
     name: "Kirti Chandra",
     initials: "K",
+    color: "bg-[#5F6368]", // Google Grey
     date: "1 hour ago",
     rating: 5,
     review:
@@ -13,6 +14,7 @@ export const reviews = [
     id: 2,
     name: "Abhishek Sachdeva",
     initials: "A",
+    color: "bg-[#1A73E8]", // Google Blue
     date: "11 hours ago",
     rating: 5,
     review:
@@ -23,6 +25,7 @@ export const reviews = [
     id: 3,
     name: "Shivani Luthra",
     initials: "S",
+    color: "bg-[#34A853]", // Google Green
     date: "13 hours ago",
     rating: 5,
     review:
@@ -33,23 +36,29 @@ export const reviews = [
     id: 4,
     name: "Nikita Bhadula",
     initials: "N",
+    color: "bg-[#EA4335]", // Google Red
     date: "3 days ago",
     rating: 5,
     review:
       "I had the best experience with Move With Physio (Dr. Devika). She is polite, excellent at her job, listens carefully, and provides the best possible treatment.",
   },
-  {  id: 5,
+
+  {
+    id: 5,
     name: "Anchal Sadh",
     initials: "A",
+    color: "bg-[#FBBC04]", // Google Yellow
     date: "1 hour ago",
     rating: 5,
     review:
-      "Dr Devika is very attentive towards her patients. Highly talented and will definitely provide the best treatment",
+      "Dr Devika is very attentive towards her patients. Highly talented and will definitely provide the best treatment.",
   },
+
   {
     id: 6,
     name: "Gaurav Bhadula",
     initials: "G",
+    color: "bg-[#4285F4]", // Google Blue (alternate)
     date: "5 days ago",
     rating: 5,
     review:

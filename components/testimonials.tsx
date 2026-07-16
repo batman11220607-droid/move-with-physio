@@ -52,34 +52,51 @@ export default function Testimonials() {
 
           {/* Rating Card */}
 
-          <div className="mt-12 flex justify-center">
+{/* Rating Card */}
+<div className="mt-12 flex justify-center">
+  <div className="bg-white rounded-3xl border border-slate-200 shadow-xl px-8 py-6 w-full max-w-sm hover:shadow-2xl transition-all duration-300">
 
-            <div className="bg-white rounded-3xl shadow-lg border border-slate-200 px-10 py-7">
+    <div className="flex items-center justify-center gap-5">
 
-              <div className="flex justify-center gap-1 mb-3">
+      {/* Google Logo */}
+      <div className="flex-shrink-0 -mt-5">
+        <img
+          src="/googlelogo.jpg"
+          alt="Google"
+          className="w-16 h-16"
+        />
+      </div>
 
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={24}
-                    className="fill-yellow-400 text-yellow-400"
-                  />
-                ))}
+      {/* Rating Content */}
+      <div className="text-center">
 
-              </div>
+        <div className="flex justify-center gap-1 mb-2">
+          {[...Array(5)].map((_, i) => (
+            <Star
+              key={i}
+              size={20}
+              className="fill-[#FBBC05] text-[#FBBC05]"
+            />
+          ))}
+        </div>
 
-              <h3 className="text-4xl font-bold text-center text-slate-900">
-                5.0
-              </h3>
+        <h3 className="text-5xl font-bold text-slate-900 leading-none">
+          5.0
+        </h3>
 
-              <p className="text-center text-slate-500 mt-2">
-                Based on 6 Google Reviews
-              </p>
+        <p className="text-sm text-slate-500 mt-2">
+          Based on{" "}
+          <span className="font-semibold text-slate-700">
+            6 Google Reviews
+          </span>
+        </p>
 
-            </div>
+      </div>
 
-          </div>
+    </div>
 
+  </div>
+</div>
           {/* Carousel */}
 
 {/* Carousel */}
@@ -101,11 +118,10 @@ export default function Testimonials() {
   {/* Left Button */}
   <button
     onClick={scrollPrev}
-    className="absolute left-4 top-1/2 -translate-y-1/2 z-20
-               w-12 h-12 rounded-full bg-emerald-600 text-white
-               shadow-xl hover:bg-emerald-700
-               hover:scale-110 transition-all
-               flex items-center justify-center"
+    className="absolute hidden lg:flex -left-14 top-1/2 -translate-y-1/2 z-20
+  w-12 h-12 rounded-full bg-emerald-600 text-white
+  shadow-xl hover:bg-emerald-700 hover:scale-110
+  transition-all items-center justify-center"
   >
     <ChevronLeft size={28} />
   </button>
@@ -113,11 +129,10 @@ export default function Testimonials() {
   {/* Right Button */}
   <button
     onClick={scrollNext}
-    className="absolute right-4 top-1/2 -translate-y-1/2 z-20
-               w-12 h-12 rounded-full bg-emerald-600 text-white
-               shadow-xl hover:bg-emerald-700
-               hover:scale-110 transition-all
-               flex items-center justify-center"
+    className="absolute hidden lg:flex -right-14 top-1/2 -translate-y-1/2 z-20
+    w-12 h-12 rounded-full bg-emerald-600 text-white
+    shadow-xl hover:bg-emerald-700 hover:scale-110
+    transition-all items-center justify-center"
   >
     <ChevronRight size={28} />
   </button>
@@ -135,7 +150,7 @@ export default function Testimonials() {
           rel="noopener noreferrer"
           className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105"
         >
-          ⭐ View All Reviews
+          View reviews on Google
         </a>
 
         <a
