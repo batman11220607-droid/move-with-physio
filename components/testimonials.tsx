@@ -118,10 +118,10 @@ export default function Testimonials() {
   {/* Left Button */}
   <button
     onClick={scrollPrev}
-    className="absolute hidden lg:flex -left-14 top-1/2 -translate-y-1/2 z-20
-  w-12 h-12 rounded-full bg-emerald-600 text-white
-  shadow-xl hover:bg-emerald-700 hover:scale-110
-  transition-all items-center justify-center"
+className="absolute left-2 top-1/2 -translate-y-1/2 z-20
+w-10 h-10 rounded-full bg-emerald-600 text-white
+shadow-lg hover:bg-emerald-700
+flex items-center justify-center"
   >
     <ChevronLeft size={28} />
   </button>
@@ -129,10 +129,10 @@ export default function Testimonials() {
   {/* Right Button */}
   <button
     onClick={scrollNext}
-    className="absolute hidden lg:flex -right-14 top-1/2 -translate-y-1/2 z-20
-    w-12 h-12 rounded-full bg-emerald-600 text-white
-    shadow-xl hover:bg-emerald-700 hover:scale-110
-    transition-all items-center justify-center"
+className="absolute right-2 top-1/2 -translate-y-1/2 z-20
+w-10 h-10 rounded-full bg-emerald-600 text-white
+shadow-lg hover:bg-emerald-700
+flex items-center justify-center"
   >
     <ChevronRight size={28} />
   </button>
