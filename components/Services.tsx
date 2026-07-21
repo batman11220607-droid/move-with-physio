@@ -133,11 +133,12 @@ export default function Services() {
 
 </div><h3 className="mt-8 max-w-lg text-4xl md:text-5xl font-bold leading-[1.05] tracking-[-2px] text-white">
 
-Expert Physiotherapy
+Trusted Home Visit
+
 
 <br />
 
-At Your Doorstep
+Physiotherapy
 
 </h3>
 
