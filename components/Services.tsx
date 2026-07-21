@@ -1,5 +1,5 @@
 import FadeIn from "./FadeIn";
-import Image from "next/image";
+
 
 import {
   Activity,
@@ -98,65 +98,61 @@ export default function Services() {
           ))}
 
         </div>
+
 {/* ================= HOME VISIT ================= */}
 
-<div className="relative mt-24 overflow-hidden rounded-[36px] bg-gradient-to-br from-emerald-600 to-emerald-700 shadow-[0_30px_90px_rgba(0,0,0,0.18)]">
+<div className="relative mt-24 overflow-hidden rounded-[40px] bg-gradient-to-br from-emerald-600 via-emerald-600 to-emerald-700 shadow-[0_30px_90px_rgba(0,0,0,.18)]">
 
-  {/* Background Glow */}
+  {/* Background Effects */}
 
-  <div className="absolute -right-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-emerald-400/10 blur-[140px]" />
+  <div className="absolute inset-0 opacity-[0.04]">
+    <div
+      className="h-full w-full"
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+        backgroundSize: "28px 28px",
+      }}
+    />
+  </div>
 
   <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full bg-white/5 blur-[120px]" />
-  {/* Background Pattern */}
 
-<div className="absolute inset-0 opacity-[0.04]">
-  <div
-    className="h-full w-full"
-    style={{
-      backgroundImage:
-        "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-      backgroundSize: "28px 28px",
-    }}
-  />
-</div>
+  <div className="absolute -right-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-emerald-300/10 blur-[150px]" />
 
-<div className="relative z-10 grid gap-20 px-8 py-14 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-16 lg:py-16 items-center">
+<div className="relative z-10 lg:grid lg:grid-cols-[1fr_360px] lg:gap-16 px-8 py-12 lg:px-16 lg:py-16">    {/* LEFT */}
 
-  {/* LEFT */}
+    <div className="max-w-2xl">
 
-  <div>
-      <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur-md">
+      <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur-md">
 
-<Home size={18} />
+        <Home size={18} />
 
-<span>Home Visit Physiotherapy</span>
+        <span>Home Visit Physiotherapy</span>
 
-</div><h3 className="mt-8 max-w-lg text-4xl md:text-5xl font-bold leading-[1.05] tracking-[-2px] text-white">
+      </div>
 
-Trusted Home Visit
+      <h3 className="mt-7 max-w-xl text-4xl font-bold leading-tight text-white md:text-5xl">
 
+        Professional
+        <br />
+        Physiotherapy At Home
 
-<br />
+      </h3>
 
-Physiotherapy
+      <div className="mt-6 h-1 w-20 rounded-full bg-emerald-300" />
 
-</h3>
+      <p className="mt-6 max-w-xl text-lg leading-8 text-emerald-50">
 
-<div className="mt-6 h-1 w-20 rounded-full bg-emerald-300"></div>
-<p className="mt-7 max-w-xl text-lg leading-8 text-emerald-50">
+        Receive expert physiotherapy services in the comfort of your
+        home. Whether you're recovering from surgery, managing chronic
+        pain, or caring for elderly family members, our experienced
+        physiotherapists bring professional treatment directly to you.
 
-Receive expert physiotherapy services in the comfort of your home.
+      </p>
+      {/* Feature Chips */}
 
-Whether you're recovering from surgery, managing chronic pain,
-
-or caring for elderly family members, our experienced
-
-physiotherapists bring professional treatment directly to you.
-
-</p>
-{/* Features */}
-
-<div className="mt-10 flex flex-wrap gap-4">
+<div className="mt-10 flex flex-wrap gap-3">
 
   {[
     {
@@ -178,22 +174,12 @@ physiotherapists bring professional treatment directly to you.
   ].map((item, index) => (
     <div
       key={index}
-      className="
-      flex
-      items-center
-      gap-3
-      rounded-full
-      border
-      border-white/10
-      bg-white/10
-      px-4
-      py-3
-      backdrop-blur-md
-      transition
-      hover:bg-white/15
-      "
+      className="flex items-center gap-3 rounded-full border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-md transition hover:bg-white/15"
     >
-      <item.icon size={18} className="text-emerald-200" />
+      <item.icon
+        size={18}
+        className="text-emerald-200"
+      />
 
       <span className="text-sm font-medium text-white">
         {item.title}
@@ -202,6 +188,9 @@ physiotherapists bring professional treatment directly to you.
   ))}
 
 </div>
+
+{/* Trust Row */}
+
 <div className="mt-10 flex flex-wrap items-center gap-8 text-emerald-100">
 
   <div className="flex items-center gap-2">
@@ -221,145 +210,76 @@ physiotherapists bring professional treatment directly to you.
   </div>
 
 </div>
+
 </div>
-{/* RIGHT */}
 
-<div className="relative flex items-center justify-center mt-12 lg:mt-0">
-  {/* Glow */}
+{/* Right Side */}
 
-  <div className="absolute h-[420px] w-[420px] rounded-full bg-emerald-400/10 blur-[120px]" />
+<div className="mt-12 lg:mt-0 flex flex-col justify-start lg:pt-8 gap-5">
+      {/* Book */}
 
-  <div className="relative z-10 flex flex-col items-center">
+    <a
+      href="https://wa.me/919899361297?text=Hi%20Dr.%20Devika,%0A%0AI%20would%20like%20to%20book%20a%20Home%20Visit%20Physiotherapy%20session.%20Could%20you%20please%20share%20the%20available%20time%20slots?%20Thank%20you!"
+      target="_blank"
+      rel="noopener noreferrer"
+className="group flex items-center justify-between rounded-2xl bg-white px-6 py-6 text-emerald-700 shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl"    >
 
-    {/* Illustration */}
+<div className="flex items-center gap-4">
 
-    <Image
-      src="/images/home-physio.png"
-      alt="Home Physiotherapy"
-     width={460}
-height={460}
-className="
-drop-shadow-[0_35px_80px_rgba(0,0,0,.35)]
-transition-transform
-duration-500
-hover:scale-105
-"
-    />
+  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100">
+    <CalendarDays className="text-emerald-700" size={22} />
+  </div>
 
-    {/* CTA */}
-    <div className="my-6 h-px w-full max-w-sm bg-white/10" />
-    <div className="mt-8 w-full max-w-sm space-y-4">
+  <div>
+    <p className="text-xs uppercase tracking-wider text-gray-500">
+      Schedule
+    </p>
 
-      {/* Book Visit */}
-
-      <a
-        href="https://wa.me/919899361297?text=Hi%20Dr.%20Devika,%0A%0AI%20would%20like%20to%20book%20a%20Home%20Visit%20Physiotherapy%20session.%20Could%20you%20please%20share%20the%20available%20time%20slots?%20Thank%20you!"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="
-        group
-        flex
-        items-center
-        justify-between
-        rounded-2xl
-        bg-white
-        px-7
-        py-6
-        shadow-xl
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:scale-[1.02]
-        hover:shadow-2xl
-        "
-      >
-
-        <div className="flex items-center gap-4">
-
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100">
-
-            <CalendarDays
-              className="text-emerald-700"
-              size={22}
-            />
-
-          </div>
-
-          <div>
-
-            <p className="text-xs uppercase tracking-wider text-gray-500">
-              Schedule
-            </p>
-
-            <h4 className="font-semibold text-emerald-700">
-              Book Home Visit
-            </h4>
-
-          </div>
-
-        </div>
-
-        <ArrowRight className="text-emerald-700 transition group-hover:translate-x-1" />
-
-      </a>
-
-      {/* Call */}
-
-      <a
-        href="tel:+919899361297"
-        className="
-        group
-        flex
-        items-center
-        justify-between
-        rounded-2xl
-        border
-        border-white/20
-        bg-white/10
-        backdrop-blur-md
-        px-7
-        py-6
-        text-white
-        transition-all
-        duration-300
-        hover:bg-white/15
-        hover:border-white/40
-        "
-      >
-
-        <div className="flex items-center gap-4">
-
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
-
-            <Phone size={22} />
-
-          </div>
-
-          <div>
-
-            <p className="text-xs uppercase tracking-wider text-emerald-200">
-              Need Help?
-            </p>
-
-            <h4 className="font-semibold">
-              Call Now
-            </h4>
-
-          </div>
-
-        </div>
-
-        <ArrowRight className="transition group-hover:translate-x-1" />
-
-      </a>
-
-    </div>
-
+    <h4 className="font-semibold">
+      Book Home Visit
+    </h4>
   </div>
 
 </div>
+
+<ArrowRight
+  size={18}
+  className="transition group-hover:translate-x-1"
+/>
+
+
+    </a>
+    {/* Call */}
+
+<a
+  href="tel:+919899361297"
+className="group flex items-center justify-between rounded-2xl border border-white/20 bg-white/10 px-6 py-6 text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/15">
+  <div className="flex items-center gap-4">
+    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
+      <Phone size={22} />
     </div>
+
+    <div>
+      <p className="text-xs uppercase tracking-wider text-emerald-200">
+        Need Help?
+      </p>
+
+      <h4 className="font-semibold">
+        Call Now
+      </h4>
+    </div>
+  </div>
+  <ArrowRight
+  size={18}
+  className="transition group-hover:translate-x-1"
+/>
+</a>
 </div>
+</div>
+      </div>
+
+
+
       </div>
           </FadeIn>
     </section>
