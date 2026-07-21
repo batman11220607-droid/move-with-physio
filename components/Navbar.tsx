@@ -85,7 +85,7 @@ export default function Navbar() {
             Call Now
           </a>
 
-        </div>
+        </div>  
 
         {/* Mobile Button */}
 
@@ -131,7 +131,9 @@ export default function Navbar() {
               href="tel:9899361297"
               className="m-5 bg-emerald-600 text-white py-4 rounded-xl text-center"
             >
-              📞 Call Reception
+              <Phone size={18} />
+
+              Call Reception
             </a>
 
           </div>
